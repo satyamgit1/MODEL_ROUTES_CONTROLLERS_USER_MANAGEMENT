@@ -1,7 +1,7 @@
 {
   "name": "gita-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an Express.js server application for managing user data.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -9,8 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.1",
+    "express": "^4.19.2",
     "mongoose": "^8.2.3",
     "nodemon": "^3.1.0"
-  }
+  },
+  "devDependencies": {}
 }
