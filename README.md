@@ -15,14 +15,46 @@ This is an Express.js server application for managing user data.
 
 Users can interact with the application through API endpoints. Here are the available endpoints:
 
-- `/api/users`: GET endpoint to retrieve all users.
-- `/users`: GET endpoint to render user data as an HTML page.
-- `/api/users/:id`:
-- GET endpoint to retrieve a specific user by ID.
-- PUT endpoint to update a specific user by ID.
-- PATCH endpoint to partially update a specific user by ID.
-- DELETE endpoint to delete a specific user by ID.
-- `/api/users`: POST endpoint to create a new user.
+ ## Routes
+GET /api/users: Retrieve all users.
+POST /api/users: Create a new user.
+GET /api/users/:id: Retrieve a user by ID.
+PUT /api/users/:id: Update a user by ID.
+PATCH /api/users/:id: Update a user partially by ID.
+DELETE /api/users/:id: Delete a user by ID.
+
+ ## Controller Functions
+handleGetAllUsers: Retrieve all users from the database.
+handleGetUserById: Retrieve a user by their ID.
+handleUpdateUserById: Update a user by their ID.
+handleDeleteUserById: Delete a user by their ID.
+handlePutUserById: Update a user by their ID (PUT method).
+handleCreateNewUser: Create a new user.
+
+
+ ## Model
+The User model defines the schema for user data in the MongoDB database
+firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+  },
+  email: {
+    type: String,
+    // Add any additional constraints or validations here
+  },
+  jobTitle: {
+    type: String,
+  },
+  gender: {
+    type: String,
+    // Add any additional constraints or validations here
+  },
+}, { timestamps: true });
+
+
 
 ## Running the Application
 
@@ -31,7 +63,10 @@ To run the application locally, execute the following commands:
 
 ## Technologies Used
 
-- Express.js
+-Node.js
+-Express.js
+-MongoDB
+ - Mongoose
 - fs (File System)
 
 ## File Structure
